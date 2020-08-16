@@ -4,181 +4,264 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practical-8</title>
-    <style>
-        ul{
-            margin-top: 0;
-            list-style-type: none;
-            margin: auto;
-            margin-bottom: 35px;
-            padding: 10px;
-            overflow: hidden;
-            background-color: gray;
-            width: 100%;
-            height: 45px;
-            display: flex;
-            justify-content: space-evenly;
-            position: fixed;
-            top: 0;
-        }
-        ul li{
-            display: inline-block;
-        }
-        ul li a{
-            display: block;
-            color: white;
-            font-weight: bold;
-            width: 135px;
-            padding: 10px 35px;
-            text-decoration: none;
-            text-align: center;
-            font-size: 20px;
-        }
-        ul li a:hover{
-            background-color: white;
+</head>
+<style>
+   
+ul{
+
+    margin-top: 0px;
+    background-color: lightgray;
+    list-style: none;
+    margin: auto;
+    margin-bottom:35px;
+    padding: 10px;
+    overflow: hidden;
+     width: 100%;     /*already 100% hai kyuki html list is block level element so full width */
+     height: 45px;
+     display: flex;
+     justify-content: space-evenly;
+     position: fixed;
+    top: 0px;
+    }
+ul li{
+    display: inline-block;  /*block to inline*/
+    /* display:block inline to block changee */
+}
+ul li a{
+display: block;
+color: white;
+font-weight: bold;
+width: 135px;
+padding: 10px 35px;
+text-decoration: none;
+text-align: center;
+font-size: 20px;
+
+}
+ul li a:hover{
+
+    background-color: white;
             color: black;
-        }
-        #box1{
-            margin-top: 100px;
-            margin-bottom: 200px;
-            height: 100vh;
-            background-image: url("../images/banner.jpg"); 
-            background-repeat: no-repeat;
-        }
-        #box1 h1{
-            position: absolute;
+}
+#box1{
+    margin-top: 100px;
+    margin-bottom: 200px;
+    height: 100vh;
+    background-image: url("images/Bg.jpg");
+    background-repeat: no-repeat;
+
+}
+#box1 h1{
+    position: absolute;
             color: white;
             left: 20px;
             top: 100px;
             font-size: 80px;
             font-family: Arial, Helvetica, sans-serif;
             padding: 10px;
-        }
-        #box2,#box3,#box4,#box5 h1{
-            text-align: center;
-        }
-        .circle{
-           display: block;
-            float: left; 
-            margin: 35px; 
-            width: 20%;
-            display: flex;
-           justify-items: center;
-            align-items: center;
-            margin-bottom: 150px;
-        }
-        .circle img{ 
-            height: 277px;
-            border-radius: 50%; 
+
+}
+#box2,#box4{
+    text-align: center ;
+}
+#box5 h1{
+    text-align: center ;
+    margin-bottom: 40px;
+}
+#box3 h1 {
+    text-align: center ;
+    margin-bottom: 20px;
+
+}
+.circle{
+    float: left; 
+    padding: 35px;  /*or margin*/
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+
+}
+.circle img{
+    border-radius: 50%;
+    height: 277px;
+
+}
+#left-side{
+    margin-top: 35px;
+    width: 50%;
+    height: 100vh;
+    float: left;
+     background-color: gray;
+     color: white;
+    margin-right: 10px;
+    font-size: 25px;
+    text-align: justify;
+    padding: 10px;
+}
+#left-side h3
+{
+ text-align: left;
+ margin:0;
+margin-bottom: 10px;
 
         }
+#right-side
+{
+    width: 48%;
+    float: right;
         
-        #left-side{
-            width: 50%;
-            height: 98vh;
-            float: left;
-            background-color: gray;
-            color: white;
-            margin-right: 10px;
-            font-size: 25px;
-            text-align: justify;
-            padding: 10px;
+}
+#article-1{
+    text-align: center;
+    width: 100%;
+     height: 230px;
+     margin-bottom: 15px;
+    font-size: 30px;
+    background-image: url("images/ab.jpg");
+
+}
+
+#article-2{
+    width: 100%;
+    text-align: center;
+    height: 230px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    background-image: url("images/ab1.jpg");
+}
+
+#article-3{
+    width: 100%;
+    text-align: center;
+    height: 230px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    background-image: url("images/ab2.jpg");
+    
+}
+#box3::after{     
+
+    content: '';
+    display: block;
+    clear: both;
         }
-        #left-side h3{
-            text-align: left;
-            margin:0;
-            margin-bottom: 10px;
-        }
-        #right-side{
-            margin-top: -35px;
-            width: 48%;
-            float: right;
-        }
-        #article-1{
-        width: 100%;
-        height: 230px;
-        margin-bottom: 15px;
-        font-size: 30px;
-        background-image: url("../images/pratical1.jpg");
-        }
-        #article-2{
-        width: 100%;
-        height: 230px;
-        margin-bottom: 15px;
-        background-image: url("../images/p2.jpg");
-        font-size: 30px; 
-        }
-        #article-3{
-        width: 100%;
-        height: 230px;
-        margin-bottom: 15px;
-        font-size: 30px;
-        background-image: url("../images/p3.jpg");
-        }
-        #box3::after{
-            content: '';
-            display: block;
-            clear: both;
-        }
-        .sec{
-            width: 20%;
-            float: left;
-            background-color: lightgray;
-            margin: 20px 22px;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow:  0 5px 5px rgba(0, 0, 0, 0.15);
-            height: auto;
-            margin-bottom: 150px;
-        }
-        .sec img{
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-        .sec h4{
-            margin: 0px 10px;
-            text-align: center;
-            
-        }
-        .sec a{
-            display: block;
-            text-align: center;
-           width: 90%;
-           padding: 10px;
-           background-color: red;
-           text-decoration: none;
-           border-radius: 10px;
-           color: white;
-           float: left;
-        }
-         .sec a:hover{
-            background-color: blue;
-        }
-        p{
-            text-align: justify;
-            font-size: 15px;
-            margin: 10px;
-            line-height: 25px;
-            
-        }
-        footer{
+
+.box1
+{
+/*margin-top: 50px;
+margin-left: 30px;*/
+margin: 40px;
+width: 280px;
+height: 400px;
+border: 5px solid white;
+background-color: white;
+border-radius: 10px;
+float: left;
+}
+
+.box2
+{
+margin: 40px;
+width: 280px;
+height: 400px;
+border: 5px solid white;
+background-color: white;
+border-radius: 10px;
+float: left;
+}
+
+.box3
+{
+    margin: 40px;
+width: 280px;
+height: 400px;
+border: 5px solid white;
+background-color: white;
+border-radius: 10px;
+float: left;
+}
+
+.box4
+{
+margin: 40px;
+width: 280px;
+height: 400px;
+border: 5px solid white;
+background-color: white;
+border-radius: 10px;
+float: left;
+}
+
+.img1
+{
+
+margin-top: 5px;
+width: 100%;
+height: 40%;
+border-radius: 10px;
+
+}
+
+.img2
+{
+    margin-top: 5px;
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+
+}
+
+.img3
+{margin-top: 5px;
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+
+}
+
+.img4
+{margin-top: 5px;
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+    
+}
+ .ar{
+     
+    display: block;
+    border: solid;
+    padding: 5px; 
+     margin-top: 5px;
+     width: 95%;
+     text-decoration: none; /* line hath gyi neeche se*/
+     color: white;
+     background-color: red;
+     text-align: center;
+     border-radius: 10px;
+
+
+}
+.ar:hover{
+    background-color: blue;
+}
+footer{
             font-size: 20px;
             background-color: violet;
             padding: 20px;
-            text-align:center;
+            text-align: center;
         }
         footer a:hover{
             background-color: beige;
         }
-        
-    </style>
-</head>
+</style>
 <body>
     <a name="top"></a>
     <header>
         <ul>
-            <li><a href="#part1">HOME</a></li>
-            <li><a href="#part2">ABOUT US</a></li>
+             <li><a href="#part1">HOME</a></li>  
+            <li><a href="#part2">ABOUT</a></li>
             <li><a href="#part3">TEAM</a></li>
             <li><a href="#part4">TECHNOLOGIES</a></li>
             <li><a href="#part5">CONTACT</a></li>
@@ -186,92 +269,87 @@
     </header>
     <div id="box1">
         <a name="part1"></a>
-        <h1><b>PRACTICAL - 8</b></h1>
+        <h1><b>PRACTICAL -8</b></h1>
     </div>
     <div id="box2">
         <a name="part3"></a>
         <h1><b>Team Members</b></h1>
         <div class="circle">
-            <img src="../images/t1.png">
-        </div>
-        <div class="circle">
-            <img src="../images/t2.png">
-        </div>
-        <div class="circle">
-            <img src="../images/t3.png">
-        </div>
-        <div class="circle">
-            <img src="../images/t4.png">
-        </div>
+            <img src="images/t1.jpg" alt="pic1 of candidate">
+            </div>
+            <div class="circle">
+                <img src="images/t2.jpg" alt="pic2 of candidate">
+            </div>
+            <div class="circle">
+                <img src="images/t3.jpg" alt="pic3 of candidate">
+            </div>
+            <div class="circle">
+                <img src="images/t4.jpg" alt="pic4 of candidate">
+            </div>
     </div>
     <div id="box3">
-        <a name="part2"></a>
-        <h1><b>About Us</b></h1>
-        <div id="left-side">
-            <h3>About Projects</h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nesciunt molestiae dicta. Beatae magni provident ducimus 
-            quam nesciunt dignissimos? Atque perspiciatis consectetur alias labore incidunt libero totam corrupti, dicta laudantium 
-            assumenda illum iusto corporis! Sit numquam provident eveniet optio dolor deserunt sunt in repudiandae ratione ab nulla, 
-            aliquid, ipsum, aliquam veritatis voluptas! Dicta cumque voluptatum sunt beatae eligendi explicabo debitis temporibus earum 
-            distinctio placeat exercitationem sequi, fuga esse veniam nesciunt cum est magnam dolores provident at dolore tempore 
-            blanditiis quo. Eos qui quod labore facere reiciendis rerum at itaque aspernatur voluptas exercitationem, beatae dolorem 
-            explicabo obcaecati, odio alias quam ex.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, porro nobis delectus eligendi magni magnam veritatis 
-            quaerat ipsa nostrum, dolor aperiam nemo voluptas odio a ex laboriosam. Alias ullam, quibusdam, amet at saepe corporis 
-            optio animi nostrum ex eaque illum veniam. Maiores doloribus quis mollitia deleniti quibusdam, incidunt, sapiente dolores 
-            dolor asperiores autem, quas molestias qui iure. Sapiente, esse! Culpa aliquid sunt quam accusamus quas quibusdam obcaecati 
-            quod rerum nesciunt ea natus dolores atque quidem minus a commodi modi architecto, tenetur praesentium tempora consequuntur 
-            sit. Itaque saepe veniam perferendis repellat at? Quidem vero id earum totam fuga. Architecto, fugit atque!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque ad magni quae veritatis cumque in,
-             labore dolorem suscipit libero?
+    <a name="part2"></a>
+    <h1><b>About Us</b></h1>
+    <div id="left-side">
+        <h3>About projects</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis recusandae magni architecto sed? Reprehenderit accusantium aperiam sit nemo fugit quisquam voluptatum dolorem quod itaque non? Dolorem amet incidunt, itaque maiores architecto ex temporibus suscipit, vitae recusandae, inventore porro eligendi harum impedit modi adipisci delectus aperiam ipsam cum nihil hic nostrum. Amet beatae aliquam animi minima soluta iste molestiae hic placeat harum debitis voluptate cum officiis libero commodi voluptatem cupiditate enim nemo, possimus, nostrum velit provident voluptatibus vero. Neque eos optio totam aliquid voluptatibus, magnam, tempora fugit at quasi perferendis cumque voluptates. Cum facere omnis mollitia commodi quidem cupiditate necessitatibus vero saepe voluptates recusandae nisi velit culpa ipsum autem consectetur quisquam non, expedita repellat facilis laborum sed qui exercitationem eum. Dolorem ipsum quaerat suscipit eos, natus, tempora rem consectetur nam voluptatum fugiat, repudiandae cum labore quae error porro iste aperiam autem hic eligendi amet sequi vero odio dolorum? Error cumque quas accusamus nesciunt nostrum mollitia esse repellat. Quos aperiam maiores soluta, deserunt ipsum sit? Aut neque esse architecto maiores sed ratione cumque provident minima, harum molestias odit voluptates asperiores magni voluptate quae cum ducimus ab a minus. Pariatur natus sapiente, eveniet nisi iste libero atque repellat, necessitatibus doloribus velit ipsam nemo!
         </div>
         <div id="right-side">
-            <div id="article-1"><h3>Project-1</h3></div>
-            <div id="article-2"><h3>Project-2</h3></div>
-            <div id="article-3"><h3>Project-3</h3></div>
-        </div>
+        <div id="article-1"><h3>Project-1</h3></div>
+        <div id="article-2"><h3>Project-2</h3></div>
+        <div id="article-3"><h3>Project-3</h3></div>           
+
     </div>
-    <br>
-    <div id="box4">
-        <a name="part4"></a>
-        <h1><b>Technologies Used</b></h1>
-        <div class="sec">
-            <img src="../images/html.png">
-        <h4>Introduction to HTML</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio amet error fugiat quo, nihil sequi maiores illum odio?
-         Nesciunt, totam. Lorem ipsum dolor sit amet.</p>
-         <a href="pratical5-html.html">Read More</a>
-        </div>
-        <div class="sec">
-            <img src="../images/CSS.png">
-            <h4>Introduction to CSS</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur corrupti laboriosam reiciendis quidem libero, laborum
-             nam asperiores cum repellendus iusto.</p>
-             <a href="pratical5-css.html">Read More</a>
-        </div>
-        <div class="sec">
-            <img src="../images/javascript-.png">
-        <h4>Introduction to JS</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi praesentium, fuga illo quas iure quidem nam dignissimos non
-         ex repudiandae. Lorem ipsum dolor sit amet.</p>
-         <a href="pratical5-js.html">Read More</a>
-        </div>
-        <div class="sec">
-            <img src="../images/Bootstrap_image.png">
-        <h4>Introduction to Bootstrap</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sunt possimus labore iure ad sequi nisi. Harum, officia accusamus.
-         Dolorem. Lorem ipsum dolor sit amet.</p>
-         <a href="pratical5-bootstrap.html">Read More</a>
-        </div>
+</div>
+<br>
+
+<div id="box4">
+    <a name="part4"></a>
+    <h1><b>Technologies Used</b></h1>
+    <div class="box1">
+        <img class="img1" src="images/html.jpg" alt="This is html image.">
+    <h4  style="text-align: center;"><b>Introduction to HTML</b></h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sed assumenda voluptate architecto nemo temporibus aut at dolorum veritatis error.
+</p>
+<a class="ar" href="../Fullstack-Practical-5/html.html" alt="link" target="_blank" >Read More </a>
+</div>
+
+    <div class="box2">
+        <img class="img2" src="images/css.jpg" alt="This is css image.">
+        <h4  style="text-align: center;"><b>Introduction to CSS</b></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sed assumenda voluptate architecto nemo temporibus aut at dolorum veritatis error.
+    </p>
+    <a class="ar" href="../Fullstack-Practical-5/css.html" alt="link" target="_blank">Read More </a>
+
     </div>
-    <div id="box5">
-        <a name="part5"></a>
-        <h1>Contact</h1>
-        <footer>
-            Website Template for Practical-8 &copy; <a href="https://www.beta-labs.in/">Beta-labs</a>
-            <br><br><a href="#top">
-            Back to top</a>
-        </footer>
+
+    <div class="box3">
+        <img class="img3" src="images/js.jpg" alt="This is javascript image.">
+        <h4  style="text-align: center;"><b>Introduction to javascript</b></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sed assumenda voluptate architecto nemo temporibus aut at dolorum veritatis error.
+    </p>
+    <a class="ar" href="../Fullstack-Practical-5/js.html" alt="link" target="_blank">Read More </a>
+
     </div>
+
+    <div class="box4">          
+        <img class="img4" src="images/bs.jpg" alt="This is bootstrap image.">
+        <h4  style="text-align: center;"><b>Introduction to bootstrap</b></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sed assumenda voluptate architecto nemo temporibus aut at dolorum veritatis error.
+    </p>
+    <a class="ar" href="../Fullstack-Practical-5/bootstrap.html" alt="link" target="_blank">Read More </a>
+
+    </div>
+</div>
+<div id="box5">
+<a name="part5"></a>
+<h1><b>Contact</b></h1>
+<footer>
+    Website Template for Practical-8 &copy; <a href="https://www.beta-labs.in/">Beta-labs</a>
+    <br><br><a href="#top">
+    Back to top</a>
+</footer>
+
+</div>
 </body>
 </html>
